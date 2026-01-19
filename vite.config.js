@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/SpeedReader/',
+  base: process.env.GITHUB_ACTIONS ? '/SpeedReader/' : '/',
 })
